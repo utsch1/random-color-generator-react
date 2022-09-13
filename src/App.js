@@ -1,5 +1,4 @@
 import './App.css';
-import { css, cx } from '@emotion/css';
 import randomColor from 'randomcolor';
 import { useState } from 'react';
 
@@ -94,19 +93,6 @@ function App() {
                   }),
                 );
               }
-            }}
-          />
-        </p>
-      </div>
-      {/*Boxsize*/}
-      <div>
-        <p>
-          Box-Size
-          <input
-            value={boxSize}
-            onChange={(event) => {
-              setBoxSize(event.currentTarget.value);
-              const chosenSize = event.currentTarget.value;
             }}
           />
         </p>
