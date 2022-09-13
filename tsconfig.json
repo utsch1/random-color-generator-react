@@ -14,6 +14,7 @@
     "downlevelIteration": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
     "noEmit": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
@@ -30,23 +31,4 @@
     "**/*.mjs"
   ],
   "exclude": ["node_modules", "build"]
-}
-"compilerOptions": {
-  "lib": ["dom", "dom.iterable", "esnext"],
-  "module": "esnext",
-  "target": "es2015",
-  "moduleResolution": "node",
-  "resolveJsonModule": true,
-  "esModuleInterop": true,
-  "isolatedModules": true,
-  "allowJs": true,
-  "allowSyntheticDefaultImports": true,
-  "downlevelIteration": true,
-  "forceConsistentCasingInFileNames": true,
-  "jsx": "preserve",
- "jsxImportSource": "@emotion/react",
-  "noEmit": true,
-  "noFallthroughCasesInSwitch": true,
-  "skipLibCheck": true,
-  "strict": true
 }

@@ -32,6 +32,7 @@ function App() {
       >
         <h2>Generated color: {color}</h2>
       </div>
+      <br />
       {/* Generate Button */}
       <div>
         <button
@@ -45,58 +46,61 @@ function App() {
       </div>
       <br /> <br />
       {/* Color Input */}
-      <div className="Hue">
-        <p>
-          Color
-          <br />
-          <input
-            value={userHue}
-            onChange={(event) => {
-              setUserHue(event.currentTarget.value);
-              const chosenHue = event.currentTarget.value;
-              if (
-                chosenHue === 'red' ||
-                chosenHue === 'orange' ||
-                chosenHue === 'yellow' ||
-                chosenHue === 'green' ||
-                chosenHue === 'blue' ||
-                chosenHue === 'purple' ||
-                chosenHue === 'pink'
-              ) {
+      <div className="dropdown">
+        <div className="hue-luminosity">
+          <label>
+            <span>Choose hue: </span>
+            <select
+              id="hue"
+              value={userHue}
+              onChange={(event) => {
+                setUserHue(event.currentTarget.value);
+
+                const userHue = event.currentTarget.value;
                 setColor(
                   randomColor({
                     luminosity: 'random',
-                    hue: chosenHue,
+                    hue: userHue,
                   }),
                 );
-              }
-            }}
-          />
-        </p>
-
-        <br />
-
+              }}
+            >
+              <option value="red">red</option>
+              <option value="yellow">yellow</option>
+              <option value="orange">orange</option>
+              <option value="green">green</option>
+              <option value="blue">blue</option>
+              <option value="purple">purple</option>
+              <option value="pink">pink</option>
+            </select>
+          </label>
+        </div>
         {/* Luminosity Input */}
-        <p>
-          Luminosity
-          <br />
-          <input
-            value={userLum}
-            onChange={(event) => {
-              setUserLum(event.currentTarget.value);
-              const chosenLum = event.currentTarget.value;
-              if (chosenLum === 'light' || chosenLum === 'dark') {
+        <div className="hue-luminosity">
+          <label>
+            <span>Choose luminosity: </span>
+            <select
+              id="luminosity"
+              value={userLum}
+              onChange={(event) => {
+                setUserLum(event.currentTarget.value);
+
+                const userLum = event.currentTarget.value;
                 setColor(
                   randomColor({
-                    luminosity: chosenLum,
+                    luminosity: userLum,
                     hue: 'random',
                   }),
                 );
-              }
-            }}
-          />
-        </p>
+              }}
+            >
+              <option value="dark">dark</option>
+              <option value="light">light</option>
+            </select>
+          </label>
+        </div>
       </div>
+      {/* Box size */}
     </div>
   );
 }

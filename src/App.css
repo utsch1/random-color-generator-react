@@ -26,7 +26,6 @@
 }
 
 .Headline {
-  color: black;
   font-size: 20px;
   font-weight: bold;
   width: 100%;
@@ -36,6 +35,17 @@
   align-items: center;
   justify-content: center;
   position: static;
+  background-image: -webkit-linear-gradient(
+    350deg,
+    #ea2f86,
+    #f09c0a,
+    #fae000,
+    #93e223,
+    #4070d3,
+    #493c9e
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .ColorBlock {
@@ -60,37 +70,43 @@
   border-radius: 20px;
   background-color: #d3d3d3;
   color: #383e42;
-  position: absolute;
-  top: 62%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  flex-direction: row;
+  margin: 0 auto;
+  font-weight: bold;
 }
 
-.Hue {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.Button:hover {
+  --color-1: #ea2f86;
+  --color-2: #f09c0a;
+  --color-3: #fae000;
+  --color-4: #93e223;
+  --color-5: #4070d3;
+  --color-6: #493c9e;
+  background: linear-gradient(
+    170deg,
+    var(--color-1),
+    var(--color-2),
+    var(--color-3),
+    var(--color-4),
+    var(--color-5),
+    var(--color-6)
+  );
+  color: black;
+  border: 0px;
+  font-weight: bold;
+}
+
+.hue-luminosity {
   font-size: 14px;
-  top: 70%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  position: absolute;
+  height: 200px;
+  margin-right: 40px;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: row;
   margin: 0 auto;
   color: #d3d3d3;
-}
-
-.Luminosity {
-  width: 200px;
-  height: 20px;
-  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
