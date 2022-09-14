@@ -29,7 +29,7 @@ function App() {
           MozTransition: 'all .9s ease',
         }}
       >
-        Generated color: {color}
+        Generated Color: {color}
       </div>
       <br />
       {/* Generate Button */}
