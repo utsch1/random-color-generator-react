@@ -29,7 +29,7 @@ function App() {
           MozTransition: 'all .9s ease',
         }}
       >
-        <h2>Generated color: {color}</h2>
+        Generated color: {color}
       </div>
       <br />
       {/* Generate Button */}
@@ -99,7 +99,6 @@ function App() {
           </label>
         </div>
       </div>
-      {/* Box size */}
     </div>
   );
 }
