@@ -6,7 +6,6 @@ function App() {
   const [color, setColor] = useState(randomColor());
   const [userHue, setUserHue] = useState('');
   const [userLum, setUserLum] = useState('');
-  const [boxSize, setBoxSize] = useState('');
 
   return (
     <div
@@ -56,11 +55,11 @@ function App() {
               onChange={(event) => {
                 setUserHue(event.currentTarget.value);
 
-                const userHue = event.currentTarget.value;
+                const userColor = event.currentTarget.value;
                 setColor(
                   randomColor({
                     luminosity: 'random',
-                    hue: userHue,
+                    hue: userColor,
                   }),
                 );
               }}
@@ -85,10 +84,10 @@ function App() {
               onChange={(event) => {
                 setUserLum(event.currentTarget.value);
 
-                const userLum = event.currentTarget.value;
+                const userLumin = event.currentTarget.value;
                 setColor(
                   randomColor({
-                    luminosity: userLum,
+                    luminosity: userLumin,
                     hue: 'random',
                   }),
                 );
