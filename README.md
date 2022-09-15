@@ -1,4 +1,4 @@
-##Random color generator
+## Random color generator
 
 Generate random color with the button
 
